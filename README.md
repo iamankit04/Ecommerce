@@ -1,16 +1,114 @@
-# React + Vite
+# V-Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce storefront built with React. Browse products by category, add items to your cart, and view order totals — all in a responsive single-page application.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Home** — Hero banner with trending products and quick category filters
+- **Shop** — Full product catalog with category-based filtering
+- **Cart** — Add and remove items with live cart count and total price
+- **Contact** — Contact page for customer inquiries
+- **Navigation** — Persistent navbar with search bar and cart badge
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev/) 19
+- [Vite](https://vitejs.dev/) — fast dev server and build tool
+- [Redux Toolkit](https://redux-toolkit.js.org/) — cart state management
+- [React Router](https://reactrouter.com/) — client-side routing
+- [React Icons](https://react-icons.github.io/react-icons/) — UI icons
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- npm
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd Ecommerce
+npm install
+```
+
+### Development
+
+Start the local dev server:
+
+```bash
+npm run dev
+```
+
+Open the URL shown in the terminal (typically `http://localhost:5173`).
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Lint
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## Available Scripts
+
+| Script    | Description              |
+| --------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
+
+## Project Structure
+
+```
+Ecommerce/
+├── src/
+│   ├── assets/          # Images and static assets
+│   ├── components/      # Reusable UI components
+│   │   ├── CartCard.jsx/
+│   │   ├── Footer/
+│   │   ├── nav/
+│   │   └── Product/
+│   ├── pages/           # Route-level page components
+│   │   ├── cart/
+│   │   ├── contact/
+│   │   ├── home/
+│   │   └── shop/
+│   ├── redux/           # Redux store and cart slice
+│   ├── App.jsx          # Root component and routes
+│   ├── Category.js      # Product categories
+│   ├── dummydata.js     # Sample product data
+│   └── main.jsx         # Application entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Routes
+
+| Path       | Page    |
+| ---------- | ------- |
+| `/`        | Home    |
+| `/shop`    | Shop    |
+| `/cart`    | Cart    |
+| `/contact` | Contact |
+
+## License
+
+This project is private.
